@@ -1,10 +1,10 @@
-import Settings from './pages/Settings';
-import FinalScore from './pages/FinalScore';
-import './App.css'; 
-import Questions from './pages/Questions';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Container } from '@mui/material';
 import { Box } from '@mui/system';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Settings from './pages/Settings';
+import FinalScore from './pages/FinalScore';
+import Questions from './pages/Questions';
+import './App.css'; 
 
 function App() {
   return (

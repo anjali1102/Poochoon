@@ -5,8 +5,8 @@ axios.defaults.baseURL="https://opentdb.com/"
 
 const useAxios = ({url}) => {
   const [response, setResponse]=useState(null);
-  const [error, setError]=useState("");
-  const [loading, setLoading]=useState(true)
+  const [error, setError]= useState("");
+  const [loading, setLoading]=useState(true);
 
   //this useEffect runs everytime url change
   useEffect(()=>{

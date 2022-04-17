@@ -1,13 +1,14 @@
-// import { Typography } from "@mui/material";
 import { Button, CircularProgress, Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import { useNavigate } from "react-router-dom";
 import SelectField from "../components/SelectField";
 import TextFieldComp from "../components/TextFieldComp";
 import useAxios from "../hooks/useAxios";
 
 const Settings = () => {
   const { response, error, loading } = useAxios({ url: "/api_category.php" });
-  console.log(response);
+  const navigate = useNavigate();
+
   if (loading) {
     return (
       <Box mt={20}>
@@ -15,7 +16,6 @@ const Settings = () => {
       </Box>
     );
   }
-
   if (error) {
     return (
       <Typography variant="h6" mt={20} color="red">
@@ -34,6 +34,7 @@ const Settings = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate("/questions");
   };
 
   return (

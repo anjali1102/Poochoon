@@ -1,2 +1,0 @@
-# Poochoon
-Quiz App 
